@@ -13,6 +13,7 @@ from airflow.operators.postgres_operator import PostgresOperator
 
 default_args = {
     'owner': 'udacity',
+    'schedule_interval' :'@hourly',
     'start_date': pendulum.now(),
     'depends_on_past': False,
     'retries': 3,
